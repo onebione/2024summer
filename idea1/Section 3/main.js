@@ -1,13 +1,14 @@
 import { createElementsFromSentence, resetSentence } from './elements.js';
-import { addEventListeners } from './events.js';
+import { addEventListeners, handicapFreebie } from './events.js';
 import { initializeModal } from './modal.js';
 
-const sentence = "This is sentence";
+const sentence = "My son experiences paranormal activity in his bedroom";
 
 document.addEventListener('DOMContentLoaded', () => {
     createElementsFromSentence(sentence);
     addEventListeners();
     initializeModal();
+    handicapFreebie();
 
     // Initially disable the submit button
     const submitButton = document.querySelector('.SubmitButton');
